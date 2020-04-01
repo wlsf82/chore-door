@@ -59,6 +59,14 @@ const randomChoreDoorGenerator = () => {
   }
 };
 
+const findDoorWithChoreBot = () => {
+  [openDoor1, openDoor2, openDoor3].forEach((door, doorIndex) => {
+    if (door === botDoorPath) {
+      console.log(`The chore bot is on door ${doorIndex + 1}`);
+    }
+  })
+};
+
 doorImage1.onclick = () => {
   if (currentlyPlaying && !isClicked(doorImage1)) {
     doorImage1.src = openDoor1;
@@ -95,6 +103,7 @@ const startRound = () => {
   currentlyPlaying = true;
 
   randomChoreDoorGenerator();
+  findDoorWithChoreBot();
 };
 
 const gameOver = status => {
