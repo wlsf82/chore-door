@@ -18,6 +18,15 @@ let numClosedDoors = 3;
 
 let currentlyPlaying = true;
 
+let score = 0;
+let highScore = 0;
+
+const currentStreak = document.getElementById('score-number');
+const bestStreak = document.getElementById('high-score-number');
+
+currentStreak.innerHTML = score;
+bestStreak.innerHTML = highScore;
+
 const isBot = door => door.src === botDoorPath ? true : false;
 
 const isClicked = door => door.src === closedDoorPath ? false : true;
@@ -91,11 +100,26 @@ const startRound = () => {
 const gameOver = status => {
   const playAgainQuestion = 'Play again?';
 
-  status === WIN_STATUS ?
-    startButton.innerHTML = `You win! ${playAgainQuestion}` :
+  if (status === WIN_STATUS) {
+    startButton.innerHTML = `You win! ${playAgainQuestion}`
+    getYourScore();
+  } else {
     startButton.innerHTML = `Game over! ${playAgainQuestion}`;
+    score = 0;
+    currentStreak.innerHTML = score;
+  }
 
   currentlyPlaying = false;
+};
+
+const getYourScore = () => {
+  score++;
+
+  currentStreak.innerHTML = score;
+  if (score > highScore) {
+    highScore = score;
+    bestStreak.innerHTML = highScore;
+  }
 };
 
 startRound();

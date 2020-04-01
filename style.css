@@ -62,3 +62,30 @@ body {
   margin-bottom: 21px;
   cursor: pointer;
 }
+
+.score-row {
+  text-align: center;
+  width: 100%;
+}
+
+.score-text {
+  margin-right: 17px;
+  padding: 5px;
+  display: inline;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+
+.score-box {
+  margin-top: 9px;
+  display: inline-block;
+  padding: 8px;
+  margin: 18px;
+  margin-right: 29px;
+  width: 59px;
+  background-color: #00ffff;
+  font-family: 'Work Sans';
+  font-size: 45px;
+}
