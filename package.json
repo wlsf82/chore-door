@@ -1,0 +1,30 @@
+{
+  "name": "chore-door",
+  "version": "1.0.0",
+  "description": "Freedom project from module 1 of Codecademy's course Building Interactive JavaScript Websites.",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^4.3.0"
+  },
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlsf82/chore-door.git"
+  },
+  "keywords": [
+    "game",
+    "javascript",
+    "es6",
+    "es2015",
+    "interactive-website"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr-filho.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wlsf82/chore-door/issues"
+  },
+  "homepage": "https://github.com/wlsf82/chore-door#readme"
+}
